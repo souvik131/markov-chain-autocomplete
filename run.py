@@ -35,7 +35,7 @@ def query_recommendation(projectId,query):
 		resp=[]
 		for sent,prob in predProb:
 			resp.append({"phrase":sent,"logProbability":prob})      
-	print({'query': request.json['query'], 'prediction' : resp,'phraseLogProbability':currProb })
+	print({'query': query, 'prediction' : resp,'phraseLogProbability':currProb })
 
 
 query_recommendation(sys.argv[1],sys.argv[2])
