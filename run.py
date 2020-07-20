@@ -5,21 +5,14 @@ import json
 
 
 def getModal():
-    data=[]
     modal={}
-    with open('data/queryCleanData.json', 'r') as fp:
-        queryData= json.load(fp)
-    keysQuery=[]
-    keysQuery.extend(list(queryData.keys()))
-    print(keysQuery)
-    for projectId in keysQuery:
-        try:
-            with open('data/'+projectId+'.p', 'rb') as fp:
-                reco = RecommendationEngine(5,7)
-                reco.fit(projectId)
-                modal[projectId]=reco
-        except Exception as e:
-            print(e)
+    try:
+        with open('data/all.p', 'rb') as fp:
+            reco = RecommendationEngine(5,7)
+            reco.fit("all")
+            modal["all"]=reco
+    except Exception as e:
+        print(e)
     return modal
 
 
