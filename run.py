@@ -24,8 +24,8 @@ def query_recommendation(query):
     predProb,currProb=modal.predict(wordList)
     resp=[]
     for sent,prob in predProb:
-        resp.append({"phrase":sent,"logProbability":prob})      
-	print({'query': query, 'prediction' : resp,'phraseLogProbability':currProb })
+        resp.append({"phrase":sent,"logProbability":prob})
+    print({'query': query, 'prediction' : resp,'phraseLogProbability':currProb })
 
 
 query_recommendation(sys.argv[1])
