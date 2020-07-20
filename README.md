@@ -34,7 +34,5 @@ Once this is run, it should show following output
 ```
 
 The query contains the request query.
-
-In prediction, it shows the list of possible next phrases with thier respective log probability.
-
+In prediction, it shows the list of possible next phrases with their respective log probability.
 phraseLongProbability is the log probability of the current requested phrase.
