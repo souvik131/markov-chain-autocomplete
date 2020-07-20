@@ -1,0 +1,10 @@
+{
+    "financeProject":{
+        "i have taken loan":1,
+        "i have taken mutual fund":2
+    },
+    "retailProject":{
+        "i want to buy tofee":1,
+        "i want to purchase a box of candies":2
+    }
+}
