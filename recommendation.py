@@ -74,7 +74,6 @@ class PredictTreeNode:
             return list(set(sentences))
                 
         else:
-#             print((" ".join(self.sentence.split()[1:]),self.prob))
             return [(" ".join(self.sentence.split()[1:]),self.prob)]
         
 class RecommendationEngine:
@@ -93,11 +92,6 @@ class RecommendationEngine:
     def predict(self,wordList):
         self.curr_prob_tree=CurrPredictTreeNode(self.prob_tree, wordList)
         curr_prob=self.curr_prob_tree.getProbability()
-        if curr_prob!=None:
-            print(curr_prob,"Current Probability")
-        else:
-            curr_prob="None"
-            print(curr_prob,"Current Probability")
         predict_prob=PredictTreeNode(self.prob_tree, wordList, self.search, self.depth)
         sentences = []
         probs = []

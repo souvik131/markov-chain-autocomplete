@@ -27,3 +27,14 @@ In order to run the app, provide thequery phrase name as the first argument. As 
 ```sh
 python run.py "i have"
 ```
+Once this is run, it should show following output
+
+```sh
+{'query': 'i have', 'prediction': [{'phrase': 'taken loan', 'logProbability': -0.40546510810816444}, {'phrase': 'taken mutual fund', 'logProbability': -1.0986122886681098}], 'phraseLogProbability': -0.6931471805599453}
+```
+
+The query contains the request query.
+
+In prediction, it shows the list of possible next phrases with thier respective log probability.
+
+phraseLongProbability is the log probability of the current requested phrase.
