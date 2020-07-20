@@ -4,20 +4,14 @@ A Python snippet for autocompleting phrases by applying Marckov Chain Rule. It i
 
 
 ## Training
-Update data/queryCleanData.json with your own data. The first order key represents the group/project name.
-
-Inside every project, the keys represent the phrases and values represents the number of times those phrases have occured.
+Update data/queryCleanData.json with your own data. The keys in this json represent the phrases and values represents the number of times those phrases have occured.
 
 ```json
 {
-    "financeProject":{
         "i have taken loan":1,
-        "i have taken mutual fund":2
-    },
-    "retailProject":{
+        "i have taken mutual fund":2,
         "i want to buy tofee":1,
         "i want to purchase a box of candies":2
-    }
 }
 ```
 Once ready with data. Run the following command on your terminal to train on the given dataset
@@ -28,8 +22,8 @@ python train.py
 
 ### Running
 
-In order to run the app, provide the project/group name as the first argument and query as the send. As followed
+In order to run the app, provide thequery phrase name as the first argument. As followed
 
 ```sh
-python run.py financeProject "i have"
+python run.py "i have"
 ```

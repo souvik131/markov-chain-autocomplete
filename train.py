@@ -68,25 +68,12 @@ class RecommendationEngine:
 
 
 
-
-
-def run():
-    with open('data/queryCleanData.json', 'r') as fp:
-        queryData= json.load(fp)
-    for projectId in queryData.keys():
-        dataset=[]
-        for phrase, count in queryData[projectId].items():
-            dataset.append((phrase, count))
-        reco = RecommendationEngine(5,7)
-        reco.save(projectId,dataset)
-
 def runAll():
     with open('data/queryCleanData.json', 'r') as fp:
         queryData= json.load(fp)
     dataset=[]
-    for projectId in queryData.keys():
-        for phrase, count in queryData[projectId].items():
-            dataset.append((phrase, count))
+    for phrase, count in queryData.items():
+        dataset.append((phrase, count))
     reco = RecommendationEngine(5,7)
     reco.save('all',dataset)
 

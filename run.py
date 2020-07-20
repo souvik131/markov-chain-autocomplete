@@ -26,9 +26,9 @@ def getModal():
 modal=getModal()         
             
 
-def query_recommendation(projectId,query):
+def query_recommendation(query):
 	if projectId in modal:
-		reco=modal[projectId]
+		reco=modal["all"]
 		wordList=["|start|"]
 		wordList.extend(query.split())
 		predProb,currProb=reco.predict(wordList)
@@ -38,4 +38,4 @@ def query_recommendation(projectId,query):
 	print({'query': query, 'prediction' : resp,'phraseLogProbability':currProb })
 
 
-query_recommendation(sys.argv[1],sys.argv[2])
+query_recommendation(sys.argv[1])
