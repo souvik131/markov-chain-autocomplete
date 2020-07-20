@@ -31,5 +31,5 @@ python train.py
 In order to run the app, provide the project/group name as the first argument and query as the send. As followed
 
 ```sh
-python run.py projectDemo "i have"
+python run.py financeProject "i have"
 ```
